@@ -25,14 +25,19 @@ console.log(res)
 
 // fibonacci(6) -> 8 (0, 1, 1, 2, 3, 5, 8)
 
-function fibo (n) {
-
-  if (n <= 1) return n;
-  let t = fibo(n-1) + fibo(n-2);
-  // (6 - 1) + (6 - 2) = (5 - 4) = 1
-  // (6 - 1) + (6 - 2) = (5 - 4) = 1
-  console.log(t)
-  return t
+// fibonacci 2
+const fibonacci = n => {
+  if (n < 2) return n
+  return fibonacci(n - 2)+ fibonacci(n - 1)
 }
+fibonacci(10)
 
-fibo(6)
+// sin recursividad 
+function fb(num){
+  const fibbb = [0,1]
+  for (let i =2; i<=num; i++){
+    fibbb[i] = fibbb[i-1]+fibbb[i-2]
+  }
+  return fibbb[num]
+}
+fb(10)
