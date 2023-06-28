@@ -128,3 +128,29 @@ function acabanEnA(words) {
   return fin
 }
 acabanEnA(['casa', 'asa', 'taza'])
+
+///.--------------- ///
+
+function sortAbsoluteNumbers(numbers) {
+  let z = []
+  for (let i of numbers){
+    let b =(Math.abs(numbers[i]))
+    z.push(i)
+  }
+  const abso = z.sort((a, b) => b-a 
+  )
+  return abso
+}
+
+sortAbsoluteNumbers([-1, 2, 3, -5, -4, 6, 7, 8, -9])
+
+///---------------------/// 
+
+let numer = [-1, 2, 3, -5, -4, 6, 7, 8, -9]
+let x = numer.sort()
+let m = Math.abs(x)
+console.log(m)
+for (let i = 0; i<=numer.length; i++){
+  x = Math.abs(numer[i])
+  console.log(x)
+}
