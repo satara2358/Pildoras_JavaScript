@@ -131,18 +131,22 @@ acabanEnA(['casa', 'asa', 'taza'])
 
 ///.--------------- ///
 
-function sortAbsoluteNumbers(numbers) {
-  let z = []
-  for (let i of numbers){
-    let b =(Math.abs(numbers[i]))
-    z.push(i)
+  function sortAbsoluteNumbers(numbers) {
+    let z = []
+    for (let i of numbers){
+      let c = i
+      let d = Math.abs(c)
+      z.push(d)
+    }
+    console.log(z)
+    const orden = z.sort((a,b) => {
+      return b - a 
+    }
+    )
+    return orden
   }
-  const abso = z.sort((a, b) => b-a 
-  )
-  return abso
-}
 
-sortAbsoluteNumbers([-1, 2, 3, -5, -4, 6, 7, 8, -9])
+  sortAbsoluteNumbers([-1, 2, 3, -5, -4, 6, 7, 8, -9])
 
 ///---------------------/// 
 
