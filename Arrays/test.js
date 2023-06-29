@@ -131,42 +131,36 @@ acabanEnA(['casa', 'asa', 'taza'])
 
 ///.---------------     
 
-  function sortAbsoluteNumbers(numbers) {
-    let z = []
-    for (let i of numbers){
-      let d = i
-      z.push(d)
-    }
-    console.log(z)
-    const orden = z.sort((a,b) => {
-      return Math.abs(b - a)
-    }
-    )
-    return orden
-  }
+function sortAbsoluteNumbers(numbers) {
+  numbers.sort((a, b) => {
+    let va = Math.abs(a);
+    let vb = Math.abs(b);
 
-  sortAbsoluteNumbers([-1, 2, 3, -5, -4, 6, 7, 8, -9])
-
-  function sortAbsoluteNumbers(numbers) {
-    const numOrde =  Math.abs(numbers.sort((a,b) => {
-      return (a - b)
+    if (va < vb) {
+      return -1;
+    } else if (va > vb) {
+      return 1;
+    } else {
+      return 0;
     }
-    )
-    )
-    return numOrde
-  }
-  
+  });
 
-  sortAbsoluteNumbers([-1, 2, 3, -5, -4, 6, 7, 8, -9])
-  sortAbsoluteNumbers([-1, -2, -3, -5, -4, -9, 6])
+  return numbers;
+}
+
+sortAbsoluteNumbers([-1, 2, 3, -5, -4, 6, 7, 8, -9]);
 
 ///---------------------/// 
 
-let numer = [-1, 2, 3, -5, -4, 6, 7, 8, -9]
-let x = numer.sort()
-let m = Math.abs(x)
-console.log(m)
-for (let i = 0; i<=numer.length; i++){
-  x = Math.abs(numer[i])
-  console.log(x)
+let numerr = [-1, 2, 3, -5, -4, 6, 7, 8, -9]
+let m = [] //Valor Absoluto
+for (let i = 0; i<numerr.length; i++){
+  let n = Math.abs(numerr[i])
+  m.push(n)
+  console.log(n)
 }
+const x = [...numerr]
+const ordena = x.sort((a,b) => a-b) // ordena los # 
+console.log(x+'original')
+console.log(m+'valor A')
+console.log(ordena)
