@@ -150,7 +150,18 @@ function sortAbsoluteNumbers(numbers) {
 
 sortAbsoluteNumbers([-1, 2, 3, -5, -4, 6, 7, 8, -9]);
 
-///---------------------/// 
+///--------Reto Arrays-------------/// 
+
+function buscaPalabras(words, word) {
+  const inde = words.findIndex( w => w.includes(word))
+  const mayIndex = words.filter( w => w.length > inde)
+  return mayIndex
+
+}
+
+buscaPalabras(['play', 'balon', 'asa', 'taza', 'tio'], 'tio')
+
+///-------------------///
 
 let numerr = [-1, 2, 3, -5, -4, 6, 7, 8, -9]
 let m = [] //Valor Absoluto

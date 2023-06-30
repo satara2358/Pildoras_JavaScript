@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Funciones Declaraciones</title>
+</head>
+<body>
+  <p>Las funciones son valores. Se pueden asignar, copiar o declarar en cualquier lugar del código.
+    Si la función se declara como una declaración separada en el flujo del código principal, eso se llama “Declaración de función”.
+    Si la función se crea como parte de una expresión, se llama “Expresión de función”.
+    Las Declaraciones de Funciones se procesan antes de ejecutar el bloque de código. Son visibles en todas partes del bloque.
+    Las Expresiones de Función se crean cuando el flujo de ejecución las alcanza.</p>
+  <script>
+    // normal
+    function ask (question, yes, no){
+      if (confirm(question)) yes()
+      else no()
+    }
+
+    function showOk (){
+      alert ("ok")
+    }
+    function showCancel (){
+      alert("cancel")
+    }
+    // las funciones son pasadas como argumentos a la funtion ask
+    ask("de acuerdo?", showOk, showCancel)
+
+    // modo callback
+
+    function askk (questionn, yess, noo){
+      if (confirm(questionn)) yess()
+      else noo()
+    }
+
+    ask(
+      "de a cuerdo?",
+      function(){ alert ("estas de a cuerdo")},
+      function(){ alert ("cancel")}
+    )
+
+    let age = prompt("cual es tu edad?", 18)
+
+    let welcome = (age < 18)
+      ? function(){ alert('Hola ')}
+      : function(){alert ('saludos')}
+    
+    welcome()
+  </script>
+</body>
+</html>
