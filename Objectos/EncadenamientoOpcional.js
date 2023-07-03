@@ -63,9 +63,14 @@ console.log(gamesystem.specs?.cpu)
 
   function searchInOcean(ocean, section, item) {
     if (ocean?.[section]) {
-      return ocean[section]?.[item] !== undefined ? true : false;
+      return ocean[section]?.[item] !== undefined ? true : false
     }
-    return false;
+    return false
   }
   
-  console.log(searchInOcean({ sand: { animal: "pulpo" } }, "sand", "animal"));
+searchInOcean({ sand: { animal: "pulpo" } }, "sand", "animal")
+searchInOcean({}, "deep", "treasure")
+searchInOcean({ deep: { treasure: "oro" }}, "deep", "treasure")
+searchInOcean({ sand: { animal: "pulpo" }}, "sand", "pulpo")
+searchInOcean({ sand: { animal: "pulpo" }}, "deep", "treasure")
+
