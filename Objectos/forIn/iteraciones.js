@@ -86,8 +86,8 @@ function getKeysOfBooleanValues(obj) {
   const boleans = []
 
   for (const property in obj){
-    if(typeof obj[property] === 'boolean'){
-      boleans.push(property)
+    if(typeof obj[property] === 'boolean'){ // evalua con typeOf a cada objeto en su propiedad si es Boleano 
+      boleans.push(property) // envia eseo valores para mosatrarlos
     }
   }
   return boleans
