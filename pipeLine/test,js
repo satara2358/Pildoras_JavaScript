@@ -1,0 +1,6 @@
+const toUpperCase = str => str.toUpperCase()
+const trimSpaces = str => str.trim()
+
+'     Hola mundo'
+  |> toUpperCase
+  |> trimSpaces
